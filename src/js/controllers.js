@@ -14,7 +14,9 @@ netStatsApp.controller('StatsCtrl', function($scope, $filter, $localStorage, soc
 	$scope.bestBlock = 0;
 	$scope.lastBlock = 0;
 	$scope.lastDifficulty = 0;
+	$scope.lastReward = 0;
 	$scope.upTimeTotal = 0;
+	$scope.rewardTotal = 0;
 	$scope.avgBlockTime = 0;
 	$scope.blockPropagationAvg = 0;
 	$scope.avgHashrate = 0;
@@ -486,6 +488,8 @@ netStatsApp.controller('StatsCtrl', function($scope, $filter, $localStorage, soc
 			return node.stats.active == true;
 		}).length;
 
+		$scope.rewardTotal = $scope.lastReward;
+
 		$scope.upTimeTotal = _.reduce($scope.nodes, function (total, node) {
 			return total + node.stats.uptime;
 		}, 0) / $scope.nodes.length;
@@ -569,6 +573,7 @@ netStatsApp.controller('StatsCtrl', function($scope, $filter, $localStorage, soc
 
 				$scope.lastBlock = $scope.bestStats.block.arrived;
 				$scope.lastDifficulty = $scope.bestStats.block.difficulty;
+				$scope.lastReward = (0.000000000000001 * $scope.bestStats.block.difficulty);
 			}
 		}
 	}

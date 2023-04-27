@@ -15,6 +15,7 @@ netStatsApp.controller('StatsCtrl', function($scope, $filter, socket, _, toastr)
 	$scope.lastBlock = 0;
 	$scope.lastDifficulty = 0;
 	$scope.upTimeTotal = 0;
+	$scope.rewardTotal = 0;
 	$scope.avgBlockTime = 0;
 	$scope.blockPropagationAvg = 0;
 	$scope.avgHashrate = 0;

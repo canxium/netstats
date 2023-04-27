@@ -23,6 +23,7 @@ Blockchain.insert({
 	lastBlock: 0,
 	lastDifficulty: 0,
 	upTimeTotal: 0,
+	rewardTotal: 0,
 	avgBlockTime: 0,
 	blockPropagationAvg: 0,
 	avgHashrate: 0,
@@ -524,6 +525,7 @@ function updateActiveNodes()
 	var nodesTotal = Nodes.find().count(),
 		nodesActive = 0,
 		upTimeTotal = 0;
+		rewardTotal = 100;
 
 	// iterate over all nodes to get the correct data
 	_.each(Nodes.find().fetch(), function(node){
@@ -540,7 +542,8 @@ function updateActiveNodes()
 
 		nodesTotal: nodesTotal,
 		nodesActive: nodesActive,
-		upTimeTotal: upTimeTotal / nodesTotal
+		upTimeTotal: upTimeTotal / nodesTotal,
+		rewardTotal: rewardTotal,
 	}});
 }
 

@@ -116,6 +116,16 @@ Template["index"] = new Template("Template.index", (function() {
     "class": [ "col-xs-3", " ", "stat-holder", " ", "box" ]
   }, HTML.DIV({
     "class": function() {
+      return [ "reward", " ", Spacebars.mustache(view.lookup("rewardClass"), view.lookup("rewardTotal"), true) ];
+    }
+  }, HTML.Raw('<i class="icon-clock"></i>'), "\n", HTML.Raw('<span class="small-title">block reward</span>'), "\n", HTML.SPAN({
+    "class": "small-value"
+  }, Blaze.View("lookup:rewardFilter", function() {
+    return Spacebars.mustache(view.lookup("rewardFilter"), Spacebars.dot(view.lookup("Blockchain"), "rewardTotal"));
+  }))))),"\n", HTML.DIV({
+    "class": [ "col-xs-3", " ", "stat-holder", " ", "box" ]
+  }, HTML.DIV({
+    "class": function() {
       return [ "uptime", " ", Spacebars.mustache(view.lookup("upTimeClass"), view.lookup("upTimeTotal"), true) ];
     }
   }, HTML.Raw('<i class="icon-bulb"></i>'), "\n", HTML.Raw('<span class="small-title">uptime</span>'), "\n", HTML.SPAN({

@@ -88,6 +88,11 @@ block content
               span.small-title uptime
               span.small-value {{ upTimeTotal | upTimeFilter }}
           div.col-xs-2.stat-holder.box
+            div.reward(class="{{ rewardTotal | rewardClass : true }}")
+              i.icon-bulb
+              span.small-title block reward
+              span.small-value {{ rewardTotal }} CA
+          div.col-xs-2.stat-holder.box
 
         div.row
           div.col-xs-8

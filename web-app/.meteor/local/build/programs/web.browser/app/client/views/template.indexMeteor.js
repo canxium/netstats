@@ -185,6 +185,20 @@ Template["indexMeteor"] = new Template("Template.indexMeteor", (function() {
       "class": "col-xs-3 stat-holder box"
     }, "\n                ", HTML.DIV({
       "class": function() {
+        return [ "reward ", Spacebars.mustache(view.lookup("rewardClass"), view.lookup("rewardTotal"), true) ];
+      }
+    }, HTML.I({
+      "class": "icon-clock"
+    }), HTML.SPAN({
+      "class": "small-title"
+    }, "block reward"), HTML.SPAN({
+      "class": "small-value"
+    }, Blaze.View("lookup:rewardFilter", function() {
+      return Spacebars.mustache(view.lookup("rewardFilter"), view.lookup("rewardTotal"));
+    }))), "\n              "), "\n              ", HTML.DIV({
+      "class": "col-xs-3 stat-holder box"
+    }, "\n                ", HTML.DIV({
+      "class": function() {
         return [ "uptime ", Spacebars.mustache(view.lookup("upTimeClass"), view.lookup("upTimeTotal"), true) ];
       }
     }, HTML.I({

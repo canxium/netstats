@@ -444,6 +444,11 @@ angular.module('netStatsApp.filters', [])
 		return Math.round(uptime) + '%';
 	};
 })
+.filter('rewardFilter', function() {
+	return function(reward) {
+		return Math.round(reward) + ' CA';
+	};
+})
 .filter('upTimeClass', function() {
 	return function(uptime, active) {
 		if( ! active )
@@ -456,6 +461,14 @@ angular.module('netStatsApp.filters', [])
 			return 'text-warning';
 
 		return 'text-danger';
+	};
+})
+.filter('rewardClass', function() {
+	return function(uptime, active) {
+		if( ! active )
+			return 'text-gray';
+
+		return 'text-success';
 	};
 })
 .filter('geoTooltip', function() {

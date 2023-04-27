@@ -212,6 +212,11 @@ Template.registerHelper('upTimeFilter', function(uptime) {
     return Math.round(uptime) + '%';
 });
 
+
+Template.registerHelper('rewardFilter', function(reward) {
+    return Math.round(reward) + ' CA';
+});
+
 Template.registerHelper('propagationAvgTimeClass', function(propagationAvg, active) {
     if( ! active)
         return 'text-gray';
@@ -271,6 +276,13 @@ Template.registerHelper('upTimeClass', function(uptime, active) {
         return 'text-warning';
 
     return 'text-danger';
+});
+
+Template.registerHelper('rewardClass', function(uptime, active) {
+    if( active === false )
+        return 'text-gray';
+
+    return 'text-success';
 });
 
 
