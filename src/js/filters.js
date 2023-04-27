@@ -446,7 +446,7 @@ angular.module('netStatsApp.filters', [])
 })
 .filter('rewardFilter', function() {
 	return function(reward) {
-		return Math.round(reward) + ' CA';
+		return Math.round(reward) + ' CLI';
 	};
 })
 .filter('upTimeClass', function() {

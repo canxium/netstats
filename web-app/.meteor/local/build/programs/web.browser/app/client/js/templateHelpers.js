@@ -214,7 +214,7 @@ Template.registerHelper('upTimeFilter', function(uptime) {
 
 
 Template.registerHelper('rewardFilter', function(reward) {
-    return Math.round(reward) + ' CA';
+    return Math.round(reward) + ' CLI';
 });
 
 Template.registerHelper('propagationAvgTimeClass', function(propagationAvg, active) {
