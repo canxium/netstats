@@ -1,10 +1,10 @@
-Ethereum Network Stats
+Calcium Network Stats
 ============
-[![Build Status][travis-image]][travis-url] [![dependency status][dep-image]][dep-url]
 
 This is a visual interface for tracking ethereum network status. It uses WebSockets to receive stats from running nodes and output them through an angular interface. It is the front-end implementation for [eth-net-intelligence-api](https://github.com/cubedro/eth-net-intelligence-api).
 
-![Screenshot](https://raw.githubusercontent.com/cubedro/eth-netstats/master/src/images/screenshot.jpg?v=0.0.6 "Screenshot")
+<img width="1440" alt="image" src="https://user-images.githubusercontent.com/7203064/234748890-54e715f4-c18b-4f51-84e5-43b61cd12dbe.png">
+
 
 ## Prerequisite
 * node
