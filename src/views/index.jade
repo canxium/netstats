@@ -91,7 +91,7 @@ block content
             div.reward(class="{{ rewardTotal | rewardClass : true }}")
               i.icon-bulb
               span.small-title block reward
-              span.small-value {{ rewardTotal }} CLI
+              span.small-value {{ rewardTotal | rewardFilter }}
           div.col-xs-2.stat-holder.box
 
         div.row

@@ -573,7 +573,8 @@ netStatsApp.controller('StatsCtrl', function($scope, $filter, $localStorage, soc
 
 				$scope.lastBlock = $scope.bestStats.block.arrived;
 				$scope.lastDifficulty = $scope.bestStats.block.difficulty;
-				$scope.lastReward = (0.000000000000001 * $scope.bestStats.block.difficulty);
+				console.log($scope.bestStats.block.minerReward)
+				$scope.lastReward = (Number($scope.bestStats.block.minerReward) + Number($scope.bestStats.block.fundReward));
 			}
 		}
 	}
