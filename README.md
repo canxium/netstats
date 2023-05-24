@@ -1,7 +1,7 @@
-Calcium Network Stats
+Canxium Stats
 ============
 
-This is a visual interface for tracking calcium network status. It uses WebSockets to receive stats from running nodes and output them through an angular interface. It is the front-end implementation for [eth-net-intelligence-api](https://github.com/cubedro/eth-net-intelligence-api).
+This is a visual interface for tracking canxium status. It uses WebSockets to receive stats from running nodes and output them through an angular interface. It is the front-end implementation for [eth-net-intelligence-api](https://github.com/cubedro/eth-net-intelligence-api).
 
 <img width="1440" alt="image" src="https://user-images.githubusercontent.com/7203064/234748890-54e715f4-c18b-4f51-84e5-43b61cd12dbe.png">
 

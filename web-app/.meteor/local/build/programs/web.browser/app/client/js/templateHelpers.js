@@ -219,7 +219,7 @@ Template.registerHelper('rewardFilter', function(reward) {
     } else if (reward < 500000000000000) {
         return Math.round(reward/1000000000) + ' Heli';
     } else {
-        return reward/1000000000000000000 + ' Cli';
+        return reward/1000000000000000000 + ' CAU';
     }
 });
 
