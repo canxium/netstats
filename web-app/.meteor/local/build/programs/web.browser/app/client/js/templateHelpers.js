@@ -215,9 +215,9 @@ Template.registerHelper('upTimeFilter', function(uptime) {
 
 Template.registerHelper('rewardFilter', function(reward) {
     if (reward < 1000000000) {
-        return Math.round(reward) + ' Hydro';
+        return Math.round(reward) + ' Wei';
     } else if (reward < 500000000000000) {
-        return Math.round(reward/1000000000) + ' Heli';
+        return Math.round(reward/1000000000) + ' Gwei';
     } else {
         return reward/1000000000000000000 + ' CAU';
     }
